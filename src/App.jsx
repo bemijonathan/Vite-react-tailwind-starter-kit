@@ -1,21 +1,21 @@
 import React from "react";
 import "./assets/css/output.css";
-import { Router, Link } from "@reach/router";
+import { Router } from "@reach/router";
 import Home from "./views/Home";
 import About from "./views/About";
+import Nav from "./components/Nav";
 
 function App() {
 	return (
-		<div>
-			<nav>
-				<Link to="/"> Home </Link>
-				<Link to="/about"> About </Link>
-			</nav>
-			<Router>
-				<Home path="/" />
-				<About path="/about" />
-			</Router>
-		</div>
+		<>
+			<Nav />
+			<div className="dark:bg-gray-900 dark:text-gray-300">
+				<Router>
+					<Home path="/" />
+					<About path="/about" />
+				</Router>
+			</div>
+		</>
 	);
 }
 
