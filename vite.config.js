@@ -1,12 +1,13 @@
 // @ts-check
-const reactPlugin = require('vite-plugin-react')
+import reactPlugin from "vite-plugin-react";
 
 /**
  * @type { import('vite').UserConfig }
  */
 const config = {
-  jsx: 'react',
-  plugins: [reactPlugin]
-}
+	jsx: "react",
+	plugins: [reactPlugin],
+	silent: false,
+};
 
-module.exports = config
+export default config;
