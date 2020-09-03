@@ -2,8 +2,9 @@
 	"name": "vite-starter-template",
 	"version": "0.0.0",
 	"scripts": {
-		"dev": "vite",
-		"build": "vite build"
+		"dev": "npm run tailwind && vite",
+		"build": "npm run tailwind && vite build",
+		"tailwind": "npx tailwindcss build styles.css -o src/assets/css/output.css "
 	},
 	"dependencies": {
 		"@pika/react": "^16.13.1",
